@@ -1,19 +1,15 @@
 /* Application entry point */
-const database = require('./src/services/database');
+const config = require('./config');
 
 /* Logging */
 const loglevel = require('loglevel');
-loglevel.setLevel('info');
+loglevel.setLevel(config.loglevel);
 
-/* Loading config file "netwatch.yaml" */
-require('./src/configuration').load();
+/* Loading environment variables for development */
+require('dotenv').config();
 
-// /* Initializing database connection */
-// database.open().then(() => {
-
-    /* Run application */
-    require('./src/netwatch');
-// });
+/* Run application */
+require('./src/netwatch');
 
 /* The command was executed; closing connection. */
 // database.close();

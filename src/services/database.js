@@ -1,10 +1,11 @@
 const loglevel = require('loglevel');
 const mongoose = require('mongoose');
+const config = require('../../config');
 
 async function open() {
     try {
         loglevel.debug("Opening database connection.");
-        await mongoose.connect('mongodb://localhost:27017/netwatch');
+        await mongoose.connect(config.databaseUrl);
     } catch(e) {
         loglevel.error(e);
         mongoose.disconnect();

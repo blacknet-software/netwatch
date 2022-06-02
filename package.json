@@ -6,6 +6,7 @@
     "cli-spinners": "^2.6.1",
     "cli-table3": "^0.6.2",
     "commander": "^9.2.0",
+    "dotenv": "^16.0.1",
     "jest": "^28.1.0",
     "loglevel": "^1.8.0",
     "mongoose": "^6.3.5",

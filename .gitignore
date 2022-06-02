@@ -4,6 +4,5 @@
 
 # Node.js
 /node_modules/
-
-# Builds
 /build
+.env
