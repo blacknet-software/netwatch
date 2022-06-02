@@ -1,0 +1,9 @@
+
+# Intellij IDEA
+/.idea/
+
+# Node.js
+/node_modules/
+
+# Builds
+/build
